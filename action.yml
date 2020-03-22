@@ -1,11 +1,16 @@
 # action.yml
 name: 'AWS Elastic Beanstalk cli'
+
+author: Habid Manzur
+
 description: 'Provide eb cli commands'
+
 inputs:
   command:  # id of input
     description: 'eb <command>'
     required: true
     default: 'deploy'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
