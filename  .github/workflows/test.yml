@@ -3,7 +3,7 @@ on: [push]
 jobs:
   dockerfile:
     name: Test Dockerfile
-    using: 'docker'
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,8 +17,8 @@ jobs:
           docker run awsebcli --version
 
   test:
-    runs-on: ubuntu-latest
     name: Test Action
+    runs-on: ubuntu-latest
     needs: dockerfile
     steps:
       - name: Checkout
