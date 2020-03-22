@@ -10,11 +10,11 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Build image
-      - run: | 
+        run: | 
           docker build -t awsebcli .
       
       - name: Run container
-      - run: |
+        run: |
           docker run awsebcli --version
 
   test:
