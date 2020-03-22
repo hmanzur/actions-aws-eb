@@ -13,7 +13,7 @@ This action run [eb cli](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/
 ## Example usage
 
 ```YAML
-uses: actions/actions-aws-eb@v1
+uses: hmanzur/actions-aws-eb@v1
 with:
   command: 'deploy ${{ secrets.ENVIRONMENT_NAME }}'
 ```
