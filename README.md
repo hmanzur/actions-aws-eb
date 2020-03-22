@@ -1,21 +1,15 @@
-# Hello world docker action
+# Aws eb cli action 
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This action run (eb cli)[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html]
 
 ## Inputs
 
-### `who-to-greet`
+### `command`
 
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
+**Required** The command to run on cli.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
+uses: actions/actions-aws-eb@v1
 with:
-  who-to-greet: 'Mona the Octocat'
+  command: 'deploy ${{ secrets.ENVIRONMENT_NAME }}'
