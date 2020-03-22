@@ -5,6 +5,10 @@ author: Habid Manzur
 
 description: 'Provide eb cli commands'
 
+branding:
+  icon: 'terminal'  
+  color: 'white'
+  
 inputs:
   command:  # id of input
     description: 'eb <command>'
