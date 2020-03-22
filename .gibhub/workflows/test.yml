@@ -1,0 +1,30 @@
+on: [push]
+
+jobs:
+  dockerfile:
+    name: Test Dockerfile
+    using: 'docker'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Build image
+      - run: | 
+          docker build -t awsebcli .
+      
+      - name: Run container
+      - run: |
+          docker run awsebcli --version
+
+  test:
+    runs-on: ubuntu-latest
+    name: Test Action
+    needs: dockerfile
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: See version
+        uses: ./
+        with:
+          command: '--version'
