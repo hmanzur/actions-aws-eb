@@ -1,6 +1,6 @@
 # Aws eb cli action 
 
-This action run (eb cli)[https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html]
+This action run [eb cli](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3.html)
 
 ## Inputs
 
