@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-command="docker run awsebcli $1"
+command="eb $1"
 
 $command
