@@ -6,4 +6,4 @@ RUN apt-get update -y
 
 RUN pip install --upgrade pip awsebcli
 
-ENTRYPOINT ["eb"]
+ENTRYPOINT ["/entrypoint.sh"]
