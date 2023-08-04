@@ -6,7 +6,7 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apt-get update -y
 
-RUN pip3 install --upgrade pip3 awsebcli
+RUN pip install awsebcli --upgrade --user
 
 RUN chmod +x entrypoint.sh
 
